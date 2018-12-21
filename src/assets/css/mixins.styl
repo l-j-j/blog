@@ -1,0 +1,12 @@
+//单行文本溢出省略
+ellipsis()
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+//多行文本溢出省略
+ellipses(number)
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-line-clamp: number
+  -webkit-box-orient: vertical
