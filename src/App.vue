@@ -2,26 +2,24 @@
   <div id="app">
     <Header/>
     <router-view :style="componentsWidth"/>
-    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
-import Footer from './components/Footer'
 export default {
   name: 'App',
   data(){
     return {
       componentsWidth:{
-        maxWidth:'1170px',
-        margin:'0 auto'
+        maxWidth:'1080px',
+        margin:'auto',
+        paddingTop:'1.2rem'
       }
     }
   },
   components:{
     Header,
-    Footer
   }
 }
 </script>
