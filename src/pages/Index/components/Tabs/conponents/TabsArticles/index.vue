@@ -72,9 +72,10 @@ export default {
             font-size .28rem
             font-weight 500
             line-height .4rem
-            margin-bottom .3rem
+            margin-bottom .2rem
             ellipses(2)
         .listContentDate
             color $textColor
             font-size .24rem
+            float right
 </style>

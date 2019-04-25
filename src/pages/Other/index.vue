@@ -4,11 +4,11 @@
             <el-main>
                 <Breadcrumb class="hidden-xs-only"/>
                 <ClassifyNav @changeType="handleChangeType" class="hidden-sm-and-up" mode="horizontal" />
-                <ContentList :list="articleList"/>
+                <ArticleList :list="articleList"/>
                 <Pagination :total="total" :number="number" @currentChange="handleCurrentChange"/>
             </el-main>
             <el-aside class="hidden-xs-only" width="250px">
-                <ClassifyNav @changeType="handleChangeType"/>
+               <ClassifyNav @changeType="handleChangeType"/>
             </el-aside>
         </el-container>
     </div>
@@ -16,15 +16,15 @@
 
 <script>
 import Breadcrumb from '../../components/Breadcrumb/'
-import ClassifyNav from '../../components/ClassifyNav/'
-import ContentList from '../../components/ContentList/'
+import ClassifyNav from './components/ClassifyNav'
+import ArticleList from '../Index/components/Articles'
 import Pagination from '../../components/Pagination'
-import {getArticleList} from '../../api'
+import {getRestList} from '../../api'
 export default {
     components:{
         Breadcrumb,
         ClassifyNav,
-        ContentList,
+        ArticleList,
         Pagination
     },
     data(){
@@ -37,13 +37,13 @@ export default {
         }
     },
     methods: {
-        getList(){
+       getList(){
             let params = {
                 page:this.page,
                 number:this.number,
                 type:this.type
             }
-            getArticleList(params).then(res=>{
+            getRestList(params).then(res=>{
                 this.total = res.count
                 this.articleList = res.data
             })

@@ -11,15 +11,22 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import 'element-ui/lib/theme-chalk/display.css'
 import 'animate.css'
+import store from './store'
+import filter from './filter'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueAwesomeSwiper)
+
+Object.keys(filter).forEach(key=>{
+  Vue.filter(key,filter[key])
+})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

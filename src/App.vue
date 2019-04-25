@@ -12,7 +12,7 @@ export default {
   data(){
     return {
       componentsWidth:{
-        maxWidth:'1080px',
+        maxWidth:'980px',
         margin:'auto',
         paddingTop:'1.2rem'
       }

@@ -1,43 +1,7 @@
 <template>
     <div class="mainContent">
         <ul>
-            <li class="mainContentList">
-                <div class="listImg">
-                    <img src="./images/article.jpg" alt="acticleImg">
-                </div>
-                <div class="listContent">
-                    <p class="listContentTitle">某一人似曾相识一刻似曾经历某一刻似曾经历某一人似曾相识某一刻似曾经历一刻似曾经历</p>
-                    <p class="listContentDescribe">
-                        有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突
-                    </p>
-                    <p class="listContentDate">2018-12-12</p>
-                </div>
-            </li>
-            <li class="mainContentList">
-                <div class="listImg">
-                    <img src="./images/article.jpg" alt="acticleImg">
-                </div>
-                <div class="listContent">
-                    <p class="listContentTitle">某一人似曾相识一刻似曾经历某一刻似曾经历某一人似曾相识某一刻似曾经历一刻似曾经历</p>
-                    <p class="listContentDescribe">
-                        有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突
-                    </p>
-                    <p class="listContentDate">2018-12-12</p>
-                </div>
-            </li>
-            <li class="mainContentList">
-                <div class="listImg">
-                    <img src="./images/article.jpg" alt="acticleImg">
-                </div>
-                <div class="listContent">
-                    <p class="listContentTitle">某一人似曾相识一刻似曾经历某一刻似曾经历某一人似曾相识某一刻似曾经历一刻似曾经历</p>
-                    <p class="listContentDescribe">
-                        有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突
-                    </p>
-                    <p class="listContentDate">2018-12-12</p>
-                </div>
-            </li>
-            <li class="mainContentList">
+            <li class="mainContentList" v-for="item in 5">
                 <div class="listImg">
                     <img src="./images/article.jpg" alt="acticleImg">
                 </div>
@@ -98,6 +62,7 @@ export default {
             .listContentDate
                 color $textColor
                 font-size .24rem
+                float right
 @media (max-width : 767px)
     .mainContent
         padding 0
@@ -106,13 +71,13 @@ export default {
             .listContent
                 padding .2rem
                 .listContentTitle
-                    height .4rem
+                    height .44rem
                     font-size .28rem
                 .listContentDescribe
                     height 1rem
                     margin-bottom .2rem
-                    line-height .34rem
-                    font-size .26rem
+                    line-height .36rem
+                    font-size .24rem
                     color $textColor
                     ellipses(3)
 </style>
