@@ -59,6 +59,9 @@ export default {
     max-width 100%
 .detail>>>pre
     white-space pre-wrap
+    background #333
+    color #fff
+    padding .1rem .2rem
 .detail
     padding 1rem
     .header

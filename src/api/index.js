@@ -40,3 +40,8 @@ export const getRestList = function (params) {
 export const getRest = function (params) {
     return axios.get(`/blog/rest/edit`, { params: params}).then(res=>res.data)
 }
+
+//标签页列表
+export const getTabsList = function (params) {
+    return axios.get(`/blog/main/tabs`,{params,params}).then(res=>res.data)
+}

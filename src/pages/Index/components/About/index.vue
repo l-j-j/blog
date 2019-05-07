@@ -1,7 +1,7 @@
 <template>
     <el-card class="box-card">
         <div class="aboutTitle">关于</div>
-        <div class="aboutContent">迁安市大所多阿萨斯大所大所多奥术大师大所大所多阿斯顿撒大所大所多撒大声地所大所大所大所</div>
+        <div class="aboutContent">一个vue的网站</div>
     </el-card>
 </template>
 
@@ -14,9 +14,9 @@ export default {
 .box-card
     margin .6rem 0
     .aboutTitle
-        height .4rem
-        line-height .4rem
-        font-size .3rem
+        height .5rem
+        line-height .5rem
+        font-size .28rem
         border-bottom 1px dotted #000
         margin-bottom .2rem
 </style>

@@ -4,7 +4,7 @@
             <el-main>
                 <Breadcrumb class="hidden-xs-only"/>
                 <ClassifyNav @changeType="handleChangeType" class="hidden-sm-and-up" mode="horizontal" />
-                <ArticleList :list="articleList"/>
+                <Articles :list="articleList"/>
                 <Pagination :total="total" :number="number" @currentChange="handleCurrentChange"/>
             </el-main>
             <el-aside class="hidden-xs-only" width="250px">
@@ -17,14 +17,14 @@
 <script>
 import Breadcrumb from '../../components/Breadcrumb/'
 import ClassifyNav from './components/ClassifyNav'
-import ArticleList from '../Index/components/Articles'
+import Articles from '../Index/components/Articles'
 import Pagination from '../../components/Pagination'
 import {getRestList} from '../../api'
 export default {
     components:{
         Breadcrumb,
         ClassifyNav,
-        ArticleList,
+        Articles,
         Pagination
     },
     data(){

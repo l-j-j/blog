@@ -12,9 +12,11 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/blog': {
-        target: 'http://118.31.47.124',
+        //target: 'http://118.31.47.124',
+        target:'http://localhost',
         pathRewrite: {
-          '^/blog': '/cjbk/port/public/home'
+          //'^/blog': '/cjbk/port/public/home'
+          '^/blog': '/cjbk/public/home'
         }
       }
     },

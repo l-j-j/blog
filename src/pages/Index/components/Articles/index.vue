@@ -1,16 +1,14 @@
 <template>
     <div class="mainContent">
         <ul>
-            <li class="mainContentList" v-for="item in 5">
+            <li class="mainContentList" v-for="item in list">
                 <div class="listImg">
-                    <img src="./images/article.jpg" alt="acticleImg">
+                    <img :src="item.cover" alt="acticleImg">
                 </div>
                 <div class="listContent">
-                    <p class="listContentTitle">某一人似曾相识一刻似曾经历某一刻似曾经历某一人似曾相识某一刻似曾经历一刻似曾经历</p>
-                    <p class="listContentDescribe">
-                        有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突有时候会有这样的错觉：“某一人似曾相识、某一刻似曾经历”，这样奇特的感受大概你也有过。心理学称之为“即视现象”，是记忆中太多杂乱信息制造出的一种潜意识矛盾冲突
-                    </p>
-                    <p class="listContentDate">2018-12-12</p>
+                    <p class="listContentTitle">{{item.title}}</p>
+                    <p class="listContentDescribe" v-html="item.content"></p>
+                    <p class="listContentDate">{{item.date|subDate}}</p>
                 </div>
             </li>
         </ul>
@@ -19,6 +17,11 @@
 
 <script>
 export default {
+    props:{
+        list:{
+            type:Array
+        }
+    }
 }
 </script>
 
